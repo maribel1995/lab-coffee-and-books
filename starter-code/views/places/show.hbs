@@ -1,0 +1,16 @@
+<h1>{{place.name}}</h1>
+<p>{{place.type}}</p>
+<ul>
+    <li>
+        <a href="/places">Back to the list</a>
+    </li>
+    <li>
+        <a href="/places/{{place._id}}/edit">Edit</a>
+    </li>
+</ul>
+<script>
+    let id = "{{place._id}}";
+</script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=mykey"></script>
+<script src="/javascripts/place.js"></script>

@@ -1,0 +1,15 @@
+<h1>{{title}}</h1>
+<h3>Places</h3>
+<a href="/places/new">Create new place</a>
+<div class="places">
+    <ul>
+        {{#each places}}
+        <li><a href="/places/{{this._id}}">{{this.name}} | {{this.type}}</a></li>
+        <li><a href="/places/{{this._id}}/delete">delete</a></li>
+        {{/each}}
+    </ul>
+    <div id="map"></div>
+</div>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=mykey"></script>
+<script src="/javascripts/main.js"></script>
